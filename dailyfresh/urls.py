@@ -20,6 +20,7 @@ from django.conf.urls import url
 urlpatterns = [
     re_path('^', admin.site.urls),
     url('tinymce/', include('tinymce.urls')),  # 富文本编辑器
+    re_path(r'^search', include('haystack.urls')),  # 全文检索框架
     # url('user/', include(('user.urls', 'user'), namespace='user')),  # 用户模块
     re_path(r'^cart/', include(('cart.urls', 'cart'), namespace='cart')),  # 购物车模块
     re_path(r'^user/', include(('user.urls', 'user'), namespace='user')),
