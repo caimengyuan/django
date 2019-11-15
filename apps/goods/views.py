@@ -201,12 +201,12 @@ class ListView(View):
 
         # 组织模板上下文
         # 组织模板上下文
-        context = {'type':type, 'types':types,
-                   'skus_page':skus_page,
-                   'new_skus':new_skus,
-                   'cart_count':cart_count,
-                   'pages':pages,
-                   'sort':sort}
+        context = {'type':type, 'types': types,
+                   'skus_page': skus_page,
+                   'new_skus': new_skus,
+                   'cart_count': cart_count,
+                   'pages': pages,
+                   'sort': sort}
 
         # 使用模板
         return render(request, 'list.html', context)
